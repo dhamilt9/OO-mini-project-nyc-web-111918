@@ -47,6 +47,7 @@ class User
     sorted_recipes.reverse[0 .. 2] # .map { |r| r.recipe }
   end
 
+  ### clever max_by usage **DAN** ###
   def most_recent_recipe
     self.recipecards.max_by{|recipecard| recipecard.date}.recipe
   end
